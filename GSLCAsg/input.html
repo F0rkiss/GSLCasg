@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Converter</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <div class="title">
+        <h1>Upload and Transform Your Image</h1>
+    </div>
+
+    <div class="box">
+        <div class="container">
+            <div class="input">
+                <div>
+                    <h6>Choose an image :</h6>
+                    <div class="input-box">
+                        <input type="file" id="imageInput" accept="image/*">
+                    </div>
+                </div>
+            </div>
+
+            <div class="option">
+                <div>
+                    <h6>Choose Filter:</h6>
+                    <select id="filterSelect">
+                        <option value="none">None</option>
+                        <option value="grayscale">Grayscale</option>
+                        <option value="blur">Blur</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="confirmButton">
+                <button id="myButton">Transform Image</button>
+            </div>
+
+            <div class="canvas-result">
+                <div class="original">
+                    <h6 class="text">Original</h6>
+                    <canvas id="originalCanvas" width="300" height="300"></canvas>
+                </div>
+                
+                <div class="filter">
+                    <h6 class="text">Filter</h6>
+                    <canvas id="resultCanvas" width="300" height="300"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="/mechanism.js"></script>
+</body>
+</html>
